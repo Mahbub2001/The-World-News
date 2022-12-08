@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The World News</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <header class="container">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">The World <span class="bg-info p-2 rounded">News</span></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                </ul>
+                <div class="nav-class">
+                    <button id="news-button">News</button>
+                    <button id="blog-button">Blog</button>
+                   <button class="" type="submit"><img src="/images/pic1.png" alt=""></button>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <hr class="container">
+
+    <main class="container">
+      <!-- categories container -->
+        <section class="categories-section container">
+            <div class="categories-div">
+              <ul class="indicator">
+                <li class="categories"><a href="#">Home</a></li>
+                <li class="categories"><a href="#">Breaking News</a></li>
+                <li class="categories"><a href="#">Regular News</a></li>
+                <li class="categories"><a href="#">International News</a></li>
+                <li class="categories"><a href="#">Sports</a></li>
+                <li class="categories"><a href="#">Entertainment</a></li>
+                <li class="categories"><a href="#">Culture</a></li>
+                <li class="categories"><a href="#">Arts</a></li>
+                <li class="categories"><a href="#">All News</a></li>
+              </ul>
+            </div>
+        </section>
+
+        <section class="mt-5  d-flex justify-content-center w-100">
+            <div id="found-section" class="found-section bg-light rounded">
+                <div>
+                    <p class="fw-bold ps-2 pt-3"><span id="countCard">0</span> items found for category <span id="count-name">Entertainment</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-5 d-flex justify-content-between container sort-section">
+            <div class="d-flex">
+                <span class="fw-bold">Sort By View : </span>
+                <select disabled class="form-select selection ms-2" aria-label="Default select example">
+                    <option selected >Default</option>
+                    <option value="1">High To Low</option>
+                    <option value="2">LOw To High</option>
+                  </select>
+            </div>
+            <div>
+                <button class="btn btn-primary fw-bold">Todays pic</button>
+                <button class="btn btn-primary trending-btn">Trending</button>
+            </div>
+        </section>
+
+        <!-- Items section -->
+        <section class="mt-5">
+          <div id="items">
+
+          </div>
+        </section>
+        <!-- spinner -->
+        <section id="loader" class="d-none">
+          <div style="height:400px" class="d-flex justify-content-center align-items-center">
+              <div class="spinner-border text-success" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+      </section>
+      <!-- Modal -->
+        <section>
+        <!-- Modal -->
+        <div class="modal fade" id="cardDetailModal" tabindex="-1" aria-labelledby="cardDetailModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="cardDetailModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div id="card-details" class="modal-body">
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+
+        <!-- Accordion-->
+        <section id="accordion-class" class="d-none">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Difference Between 'Arrow Function' & 'Regular Function'
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Regular functions created using function declarations or expressions are constructible and callable. Since regular functions are constructible, they can be called using the new keyword.
+                  However, the arrow functions are only callable and not constructible, i.e arrow functions can never be used as constructor functions. Hence, they can never be invoked with the new keyword.
+                  <br>
+                  "this" value inside a regular function is dynamic and depends on the invocation. But "this" inside the arrow function is bound lexically and equals to this of the outer function.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Differnce Between Map,ForEach,Filter and Find
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  The main difference between forEach and filter is that forEach just loop over the array and executes the callback but filter executes the callback and check its return value.Map like filter & foreach takes a callback and run it against every element on the array but whats makes it unique is it generate a new array based on your existing array.Map ran through every element of the array, multiplied it to 10 and returned the element which will be going to store inside our resulting array.
+                  <br>
+                  The find() method is used to find all the descendant elements of the selected element. It finds the element in the DOM tree by traversing through the root to leaf.
+                  The filter() method is used to filters all the elements and returns the element that matches and the element that do not match are removed. 
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Why we should use template string?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Template strings are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingfour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                  Why we should use template string?
+                </button>
+              </h2>
+              <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  The scope of a var variable is functional scope.	The scope of a let variable is block scope.	The scope of a const variable is block scope.
+                  <br>
+                  It can be updated and re-declared into the scope.	It can be updated but cannot be re-declared into the scope.	It cannot be updated or re-declared into the scope.
+                  <br>
+                  It can be declared without initialization.	It can be declared without initialization.	It cannot be declared without initialization.
+                  <br>
+                  It can be accessed without initialization as its default value is “undefined”.	It cannot be accessed without initialization otherwise it will give ‘referenceError’.	It cannot be accessed without initialization, as it cannot be declared without initialization.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer class="mt-5">
+        <div class="d-flex justify-content-center">
+            <div class="mt-5">
+                <p>Copyright 2022 The World News</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="/news.js"></script>
+    <script src="/blog.js"></script>
+  </body>
+</html>

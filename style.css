@@ -1,0 +1,131 @@
+body{
+    background-color: #dbdbdb;
+}
+
+.nav-class button+button{
+    margin-left: 2rem;
+}
+
+.nav-class button{
+    border: none;
+    background: none;
+}
+.indicator{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.indicator li{
+    list-style: none;
+}
+
+.indicator li a{
+    text-decoration: none;
+    color: black;
+}
+.active{
+    background-color: #b9b9fd;
+    padding:3px 10px;
+    border-radius:5px;
+    color: #3235ff;
+}
+.found-section{
+    height: 4rem;
+    width: 60rem;
+}
+.selection{
+    width: 8rem;
+    margin-top: -0.5rem;
+}
+.trending-btn{
+    background-color: white;
+    color: blue;
+}
+.font-size{
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+footer{
+    position: sticky;
+    height: 10rem;
+    width: 100%;
+    background-color: white;
+    bottom: 0;
+}
+.author-img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.news-details{
+    overflow: hidden
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1280px) {
+
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+
+    .nav-class{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-class button {
+        width: 5rem;
+    }
+    .nav-class button + button{
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+    .indicator{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .found-section{
+        height: 4rem;
+        width:38rem;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .nav-class{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-class button {
+        width: 5rem;
+    }
+    .nav-class button + button{
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+    .indicator{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .found-section{
+        height: 4rem;
+        width: 21rem;
+        text-align: center;
+
+    }
+    .sort-section{
+        flex-direction: column;
+    }
+    .sort-section div+div{
+        padding-top: 2rem;
+    }
+}
+  
+
